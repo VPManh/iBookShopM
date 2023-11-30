@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "552235653028",
+    "project_id": "testdata-90084",
+    "storage_bucket": "testdata-90084.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552235653028:android:97d3683ba38648811d9331",
+        "android_client_info": {
+          "package_name": "com.ibookshop.fragments"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHgAx8yg7MI5he8PNY3zEnwLwZ1eXm1qE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

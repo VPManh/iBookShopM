@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "738271072045",
+    "firebase_url": "https://databaseibookshop-default-rtdb.firebaseio.com",
+    "project_id": "databaseibookshop",
+    "storage_bucket": "databaseibookshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738271072045:android:3868cc49e5c039769acda4",
+        "android_client_info": {
+          "package_name": "com.ibookshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlKrd1HYnjEGcd1nqVVVMRp2NQpYgn-C8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738271072045:android:e793256582d673979acda4",
+        "android_client_info": {
+          "package_name": "com.ibookshop.fragments"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlKrd1HYnjEGcd1nqVVVMRp2NQpYgn-C8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
