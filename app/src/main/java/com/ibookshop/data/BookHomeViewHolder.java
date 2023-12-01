@@ -10,8 +10,7 @@ import com.ibookshop.R;
 
 
 public class BookHomeViewHolder extends RecyclerView.ViewHolder {
-    public TextView txtenSach;
-    public TextView txtacGia;
+    public TextView txtenSach,txtacGia,Gia,SoTrang,ngoNgu,ngayPhatHanh,theLoai,moTa;
     public ImageView imgHinh;
     public BookHomeViewHolder(@NonNull View itemView) {
 
@@ -19,6 +18,14 @@ public class BookHomeViewHolder extends RecyclerView.ViewHolder {
         txtenSach = itemView.findViewById(R.id.TenSach);
         txtacGia = itemView.findViewById(R.id.TenTacGia);
         imgHinh = itemView.findViewById(R.id.imgSach);
+        Gia = itemView.findViewById(R.id.mGia);
+        SoTrang = itemView.findViewById(R.id.mSoTrang);
+        ngayPhatHanh =itemView.findViewById(R.id.mngayPhatHanh);
+        ngoNgu = itemView.findViewById(R.id.mngonNgu);
+        theLoai=itemView.findViewById(R.id.mtheLoai);
+        moTa = itemView.findViewById(R.id.mmoTa);
+
+
     }
     public void setItemClickListener(View.OnClickListener listener) {
         itemView.setOnClickListener(listener);

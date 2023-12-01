@@ -4,8 +4,8 @@ public class BookHome {
     private String TenSach;
     private String TenTacGia;
     private String urlImage;
-    private int Gia;
-    private int SoTrang;
+    private String Gia;
+    private String SoTrang;
     private String ngayPhatHanh;
     private String ngonNgu;
     private String theLoai;
@@ -19,7 +19,7 @@ public class BookHome {
         this.urlImage = urlImage;
     }
 
-    public BookHome(String tenSach, String tenTacGia, String urlImage, int gia, int soTrang, String ngayPhatHanh, String ngonNgu, String theLoai, String moTa) {
+    public BookHome(String tenSach, String tenTacGia, String urlImage, String gia, String soTrang, String ngayPhatHanh, String ngonNgu, String theLoai, String moTa) {
         TenSach = tenSach;
         TenTacGia = tenTacGia;
         this.urlImage = urlImage;
@@ -55,19 +55,19 @@ public class BookHome {
         this.urlImage = urlImage;
     }
 
-    public int getGia() {
+    public String getGia() {
         return Gia;
     }
 
-    public void setGia(int gia) {
+    public void setGia(String gia) {
         Gia = gia;
     }
 
-    public int getSoTrang() {
+    public String getSoTrang() {
         return SoTrang;
     }
 
-    public void setSoTrang(int soTrang) {
+    public void setSoTrang(String soTrang) {
         SoTrang = soTrang;
     }
 
