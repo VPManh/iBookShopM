@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ibookshop.R;
+import com.ibookshop.activities.MainActivity;
 import com.ibookshop.data.Book;
 import com.squareup.picasso.Picasso;
 
@@ -26,7 +27,6 @@ public class activity_details extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-
         Intent intent = getIntent();
 //        if (intent != null && intent.hasExtra("Books")) {
 //             Lấy dữ liệu từ Intent
@@ -39,8 +39,6 @@ public class activity_details extends AppCompatActivity {
             String ngonNgu = intent.getStringExtra("ngonNgu");
             String theLoai = intent.getStringExtra("theLoai");
             String moTa = intent.getStringExtra("moTa");
-
-
 
             // Hiển thị dữ liệu trên giao diện
             TextView txtTenSach = findViewById(R.id.dtenSach);
@@ -71,5 +69,13 @@ public class activity_details extends AppCompatActivity {
 //            finish();
 //        }
 
+
+    }
+
+    public void toBack(View view) {
+        Intent intent = new Intent(this, mainPageFragment.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 }

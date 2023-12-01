@@ -25,7 +25,6 @@ public class BookHomeViewHolder extends RecyclerView.ViewHolder {
         theLoai=itemView.findViewById(R.id.mtheLoai);
         moTa = itemView.findViewById(R.id.mmoTa);
 
-
     }
     public void setItemClickListener(View.OnClickListener listener) {
         itemView.setOnClickListener(listener);

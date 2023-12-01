@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,7 +20,6 @@ import com.ibookshop.R;
 import com.ibookshop.data.BookHome;
 import com.ibookshop.data.BookHomeViewHolder;
 import com.squareup.picasso.Picasso;
-
 
 public class mainPageFragment extends Fragment {
 
@@ -78,9 +76,7 @@ public class mainPageFragment extends Fragment {
                         startActivity(intent);
                     }
                 });
-
             }
-
             @NonNull
             @Override
             public BookHomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

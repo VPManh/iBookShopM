@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.Book1PageFragment">
 
-
-
     <LinearLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -21,10 +19,11 @@
 
         <ImageView
             android:layout_marginTop="6dp"
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:src="@drawable/back" />
+            android:src="@drawable/back"
+            android:onClick="toBack"/>
 
         <TextView
             android:layout_width="wrap_content"
