@@ -1,4 +1,4 @@
-package com.ibookshop;
+package com.ibookshop.fragments;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.ibookshop.R;
 import com.ibookshop.data.Book;
 import com.squareup.picasso.Picasso;
 
@@ -27,7 +28,7 @@ public class activity_details extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         Intent intent = getIntent();
-        if (intent != null && intent.hasExtra("tenSach")) {
+//        if (intent != null && intent.hasExtra("Books")) {
 //             Lấy dữ liệu từ Intent
             String tenSach = intent.getStringExtra("tenSach");
             String tenTacGia = intent.getStringExtra("tenTacGia");
@@ -62,13 +63,13 @@ public class activity_details extends AppCompatActivity {
             txtheLoai.setText(theLoai);
             txmoTa.setText(moTa);
 
-
-        } else {
-            // Hiển thị một thông báo hoặc thực hiện xử lý khác nếu không có dữ liệu
-            Toast.makeText(this, "Không có dữ liệu", Toast.LENGTH_SHORT).show();
-            // Hoặc kết thúc Activity nếu không có dữ liệu
-            finish();
-        }
+//
+//        } else {
+//            // Hiển thị một thông báo hoặc thực hiện xử lý khác nếu không có dữ liệu
+//            Toast.makeText(this, "Không có dữ liệu", Toast.LENGTH_SHORT).show();
+//            // Hoặc kết thúc Activity nếu không có dữ liệu
+//            finish();
+//        }
 
     }
 }
