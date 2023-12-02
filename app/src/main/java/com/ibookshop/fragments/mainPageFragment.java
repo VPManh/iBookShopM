@@ -2,7 +2,6 @@ package com.ibookshop.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,19 +27,26 @@ public class mainPageFragment extends Fragment {
     private RecyclerView recyclerView;
     DatabaseReference database;
 
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-
         recyclerView = view.findViewById(R.id.rcv_category);
         database = FirebaseDatabase.getInstance().getReference().child("Books");
-        recyclerView.setHasFixedSize(true);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
+        load();
+
+        adapter.startListening();
+        adapter.notifyDataSetChanged();
+        recyclerView.setAdapter(adapter);
+
+
+        return view;
+    }
+    public void load(){
         options = new FirebaseRecyclerOptions.Builder<BookHome>()
                 .setQuery(database, BookHome.class)
                 .build();
@@ -84,34 +90,17 @@ public class mainPageFragment extends Fragment {
                 return new BookHomeViewHolder(view);
             }
         };
-        adapter.startListening();
-        recyclerView.setAdapter(adapter);
-
-        return view;
-    }
-//    @Override
-//    public void onSaveInstanceState(Bundle outState) {
-//        super.onSaveInstanceState(outState);
-//        // Lưu trạng thái của RecyclerView vào Bundle
-//        outState.putParcelable("recyclerViewState", recyclerView.getLayoutManager().onSaveInstanceState());
-//
-//    }
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        // Khôi phục trạng thái của RecyclerView từ Bundle
-////        recyclerView.getLayoutManager().onRestoreInstanceState(savedInstanceState.getParcelable("recyclerViewState"));
-//         Log.d("mainPageFragment", "onCreate");
-//    }
-    @Override
-    public void onStart() {
-        super.onStart();
-        adapter.startListening();
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        adapter.startListening();
+//    }
+
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        adapter.stopListening();
+//    }S
 }

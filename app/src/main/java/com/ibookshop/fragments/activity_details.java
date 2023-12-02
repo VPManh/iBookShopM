@@ -71,11 +71,11 @@ public class activity_details extends AppCompatActivity {
 
 
     }
-
-    public void toBack(View view) {
-        Intent intent = new Intent(this, mainPageFragment.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-        finish();
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
